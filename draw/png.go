@@ -2,7 +2,7 @@
 package draw
 
 import (
-	"github.com/lfritz/maze/grid"
+	"github.com/lfritz/mazes/grid"
 	"image"
 	"image/color"
 	"image/png"

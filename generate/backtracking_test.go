@@ -1,8 +1,8 @@
 package generate
 
 import (
-	"github.com/lfritz/maze/graph"
-	"github.com/lfritz/maze/grid"
+	"github.com/lfritz/mazes/graph"
+	"github.com/lfritz/mazes/grid"
 	"math/rand"
 	"reflect"
 	"testing"

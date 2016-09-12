@@ -2,7 +2,7 @@
 package generate
 
 import (
-	"github.com/lfritz/maze/graph"
+	"github.com/lfritz/mazes/graph"
 	"math/rand"
 )
 

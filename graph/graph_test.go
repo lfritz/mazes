@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"github.com/lfritz/maze/grid"
+	"github.com/lfritz/mazes/grid"
 	"testing"
 )
 
