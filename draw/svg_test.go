@@ -8,7 +8,7 @@ import (
 
 func TestHorizontalLines(t *testing.T) {
 	m := grid.Example()
-	cases := [][]Line{
+	cases := [][]line{
 		{{1, 6}},
 		{{1, 2}, {4, 5}},
 		{{0, 4}},
@@ -26,7 +26,7 @@ func TestHorizontalLines(t *testing.T) {
 
 func TestVerticalLines(t *testing.T) {
 	m := grid.Example()
-	cases := [][]Line{
+	cases := [][]line{
 		{{0, 5}},
 		{{3, 4}},
 		{{1, 2}},

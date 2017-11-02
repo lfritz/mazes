@@ -7,12 +7,12 @@ import (
 	"io"
 )
 
-type Line struct {
+type line struct {
 	from, to int
 }
 
-func horizontalLines(m *grid.Maze, y int) []Line {
-	var lines []Line
+func horizontalLines(m *grid.Maze, y int) []line {
+	var lines []line
 	width := m.Width()
 	for x := 0; x < width; {
 		for ; x < width && !*m.WallAbove(x, y); x++ {
@@ -22,14 +22,14 @@ func horizontalLines(m *grid.Maze, y int) []Line {
 		}
 		end := x
 		if end > start {
-			lines = append(lines, Line{start, end})
+			lines = append(lines, line{start, end})
 		}
 	}
 	return lines
 }
 
-func verticalLines(m *grid.Maze, x int) []Line {
-	var lines []Line
+func verticalLines(m *grid.Maze, x int) []line {
+	var lines []line
 	height := m.Height()
 	for y := 0; y < height; {
 		for ; y < height && !*m.WallLeftOf(x, y); y++ {
@@ -39,13 +39,13 @@ func verticalLines(m *grid.Maze, x int) []Line {
 		}
 		end := y
 		if end > start {
-			lines = append(lines, Line{start, end})
+			lines = append(lines, line{start, end})
 		}
 	}
 	return lines
 }
 
-// Draw m as SVG.
+// ToSVG draws m as SVG.
 func ToSVG(m *grid.Maze, w io.Writer) {
 	const margin = 10
 	const cell = 20

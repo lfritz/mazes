@@ -19,13 +19,13 @@ func consistent(m *Maze) bool {
 	}
 
 	for i, rows := range m.walls {
-		expected_rows := m.width + i
-		expected_cols := m.height + 1 - i
-		if len(rows) != expected_rows {
+		expectedRows := m.width + i
+		expectedCols := m.height + 1 - i
+		if len(rows) != expectedRows {
 			return false
 		}
 		for _, row := range rows {
-			if len(row) != expected_cols {
+			if len(row) != expectedCols {
 				return false
 			}
 		}

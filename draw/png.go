@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-// Draw m to a grayscale raster image.
+// ToImage draws m to a grayscale raster image.
 func ToImage(m *grid.Maze) image.Image {
 	wallColor := color.Gray{0xd0}
 	cellWidth := 6
@@ -62,7 +62,7 @@ func storeImage(image image.Image, path string) {
 	png.Encode(w, image)
 }
 
-// Store m in a PNG file.
+// ToPNG draws m and saves it to a PNG file.
 func ToPNG(m *grid.Maze, path string) {
 	storeImage(ToImage(m), path)
 }
